@@ -1,0 +1,71 @@
+{
+  "version": "0.5.4",
+  "name": "solid-formlet",
+  "description": "Functional combinators for building reactive forms",
+  "license": "MIT",
+  "author": "functorism",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/functorism/solid-formlet.git"
+  },
+  "homepage": "https://github.com/functorism/solid-formlet#readme",
+  "bugs": {
+    "url": "https://github.com/functorism/solid-formlet/issues"
+  },
+  "private": false,
+  "sideEffects": false,
+  "type": "module",
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "solid": "./dist/source/index.jsx",
+      "import": "./dist/esm/index.js",
+      "browser": {
+        "import": "./dist/esm/index.js",
+        "require": "./dist/cjs/index.js"
+      },
+      "require": "./dist/cjs/index.js",
+      "node": "./dist/cjs/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite serve dev",
+    "test": "echo \"test not setup\"",
+    "build": "rollup -c && typedoc src",
+    "format": "prettier -w \"src/**/*.{js,ts,json,css,tsx,jsx}\" \"dev/**/*.{js,ts,json,css,tsx,jsx}\"",
+    "update-deps": "taze -w && npm i",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "solid-js": ">=1.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "prettier": "2.7.1",
+    "rollup": "^2.79.0",
+    "rollup-preset-solid": "^1.4.0",
+    "solid-js": "^1.5.4",
+    "tailwindcss": "^3.1.8",
+    "taze": "^0.7.6",
+    "typedoc": "^0.23.14",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.0",
+    "vite-plugin-solid": "^2.3.0"
+  },
+  "keywords": [
+    "solid",
+    "form",
+    "forms",
+    "formlet"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "entryPoints": ["./src/index.ts"],
+  "githubPages": true,
+  "commentStyle": "all",
+  "out": "docs"
+}
