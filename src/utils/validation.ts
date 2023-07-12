@@ -1,4 +1,4 @@
-import { Validation } from "src";
+import { Validation } from "..";
 import { Either } from "./either";
 import { pipe } from "./pipe";
 
@@ -52,8 +52,8 @@ export const withFailures = <E, A>(es1: Array<E>, f: Validation<E, A>): Validati
   });
 
 export const map =
-  <E, A, B>(g: (a: A) => B) =>
-  (f: Validation<E, A>): Validation<E, B> =>
+  <A, B>(g: (a: A) => B) =>
+  <E>(f: Validation<E, A>): Validation<E, B> =>
     f.match<Validation<E, B>>({
       Success: (a) => Success(g(a)),
       Warning: (es, a) => Warning(es, g(a)),

@@ -1,5 +1,5 @@
 {
-  "version": "0.5.4",
+  "version": "0.5.6",
   "name": "solid-formlet",
   "description": "Functional combinators for building reactive forms",
   "license": "MIT",
@@ -49,18 +49,18 @@
     "solid-js": ">=1.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.16",
-    "prettier": "2.7.1",
-    "rollup": "^2.79.0",
-    "rollup-preset-solid": "^1.4.0",
-    "solid-js": "^1.5.4",
-    "tailwindcss": "^3.1.8",
-    "taze": "^0.7.6",
-    "typedoc": "^0.23.14",
-    "typescript": "^4.8.3",
-    "vite": "^3.1.0",
-    "vite-plugin-solid": "^2.3.0"
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.25",
+    "prettier": "3.0.0",
+    "rollup": "^3.26.2",
+    "rollup-preset-solid": "^2.0.1",
+    "solid-js": "^1.7.8",
+    "tailwindcss": "^3.3.2",
+    "taze": "^0.11.2",
+    "typedoc": "^0.24.8",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.3",
+    "vite-plugin-solid": "^2.7.0"
   },
   "keywords": [
     "solid",

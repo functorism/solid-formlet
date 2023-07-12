@@ -1,18 +1,13 @@
 export function pipe<A>(a: A): A;
 export function pipe<A, B>(a: A, ab: (a: A) => B): B;
 export function pipe<A, B, C>(a: A, ab: (a: A) => B, bc: (b: B) => C): C;
-export function pipe<A, B, C, D>(
-  a: A,
-  ab: (a: A) => B,
-  bc: (b: B) => C,
-  cd: (c: C) => D
-): D;
+export function pipe<A, B, C, D>(a: A, ab: (a: A) => B, bc: (b: B) => C, cd: (c: C) => D): D;
 export function pipe<A, B, C, D, E>(
   a: A,
   ab: (a: A) => B,
   bc: (b: B) => C,
   cd: (c: C) => D,
-  de: (d: D) => E
+  de: (d: D) => E,
 ): E;
 export function pipe<A, B, C, D, E, F>(
   a: A,
@@ -20,7 +15,7 @@ export function pipe<A, B, C, D, E, F>(
   bc: (b: B) => C,
   cd: (c: C) => D,
   de: (d: D) => E,
-  ef: (e: E) => F
+  ef: (e: E) => F,
 ): F;
 export function pipe<A, B, C, D, E, F, G>(
   a: A,
@@ -29,7 +24,7 @@ export function pipe<A, B, C, D, E, F, G>(
   cd: (c: C) => D,
   de: (d: D) => E,
   ef: (e: E) => F,
-  fg: (f: F) => G
+  fg: (f: F) => G,
 ): G;
 export function pipe<A, B, C, D, E, F, G, H>(
   a: A,
@@ -39,7 +34,7 @@ export function pipe<A, B, C, D, E, F, G, H>(
   de: (d: D) => E,
   ef: (e: E) => F,
   fg: (f: F) => G,
-  gh: (g: G) => H
+  gh: (g: G) => H,
 ): H;
 export function pipe<A, B, C, D, E, F, G, H, I>(
   a: A,
@@ -50,7 +45,7 @@ export function pipe<A, B, C, D, E, F, G, H, I>(
   ef: (e: E) => F,
   fg: (f: F) => G,
   gh: (g: G) => H,
-  hi: (h: H) => I
+  hi: (h: H) => I,
 ): I;
 export function pipe<A, B, C, D, E, F, G, H, I, J>(
   a: A,
@@ -62,7 +57,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J>(
   fg: (f: F) => G,
   gh: (g: G) => H,
   hi: (h: H) => I,
-  ij: (i: I) => J
+  ij: (i: I) => J,
 ): J;
 export function pipe<A, B, C, D, E, F, G, H, I, J, K>(
   a: A,
@@ -75,7 +70,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, K>(
   gh: (g: G) => H,
   hi: (h: H) => I,
   ij: (i: I) => J,
-  jk: (j: J) => K
+  jk: (j: J) => K,
 ): K;
 export function pipe<A, B, C, D, E, F, G, H, I, J, K, L>(
   a: A,
@@ -89,7 +84,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, K, L>(
   hi: (h: H) => I,
   ij: (i: I) => J,
   jk: (j: J) => K,
-  kl: (k: K) => L
+  kl: (k: K) => L,
 ): L;
 export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M>(
   a: A,
@@ -104,7 +99,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M>(
   ij: (i: I) => J,
   jk: (j: J) => K,
   kl: (k: K) => L,
-  lm: (l: L) => M
+  lm: (l: L) => M,
 ): M;
 export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N>(
   a: A,
@@ -120,7 +115,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N>(
   jk: (j: J) => K,
   kl: (k: K) => L,
   lm: (l: L) => M,
-  mn: (m: M) => N
+  mn: (m: M) => N,
 ): N;
 export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O>(
   a: A,
@@ -137,7 +132,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O>(
   kl: (k: K) => L,
   lm: (l: L) => M,
   mn: (m: M) => N,
-  no: (n: N) => O
+  no: (n: N) => O,
 ): O;
 export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P>(
   a: A,
@@ -155,7 +150,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P>(
   lm: (l: L) => M,
   mn: (m: M) => N,
   no: (n: N) => O,
-  op: (o: O) => P
+  op: (o: O) => P,
 ): P;
 export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q>(
   a: A,
@@ -174,7 +169,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q>(
   mn: (m: M) => N,
   no: (n: N) => O,
   op: (o: O) => P,
-  pq: (p: P) => Q
+  pq: (p: P) => Q,
 ): Q;
 export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R>(
   a: A,
@@ -194,7 +189,7 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R>(
   no: (n: N) => O,
   op: (o: O) => P,
   pq: (p: P) => Q,
-  qr: (q: Q) => R
+  qr: (q: Q) => R,
 ): R;
 export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S>(
   a: A,
@@ -215,30 +210,9 @@ export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S>(
   op: (o: O) => P,
   pq: (p: P) => Q,
   qr: (q: Q) => R,
-  rs: (r: R) => S
+  rs: (r: R) => S,
 ): S;
-export function pipe<
-  A,
-  B,
-  C,
-  D,
-  E,
-  F,
-  G,
-  H,
-  I,
-  J,
-  K,
-  L,
-  M,
-  N,
-  O,
-  P,
-  Q,
-  R,
-  S,
-  T
->(
+export function pipe<A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T>(
   a: A,
   ab: (a: A) => B,
   bc: (b: B) => C,
@@ -258,7 +232,7 @@ export function pipe<
   pq: (p: P) => Q,
   qr: (q: Q) => R,
   rs: (r: R) => S,
-  st: (s: S) => T
+  st: (s: S) => T,
 ): T;
 export function pipe(
   a: unknown,
@@ -280,7 +254,7 @@ export function pipe(
   pq?: Function,
   qr?: Function,
   rs?: Function,
-  st?: Function
+  st?: Function,
 ): unknown {
   switch (arguments.length) {
     case 1:
@@ -312,62 +286,20 @@ export function pipe(
     case 14:
       return mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a)))))))))))));
     case 15:
-      return no!(
-        mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a)))))))))))))
-      );
+      return no!(mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a))))))))))))));
     case 16:
-      return op!(
-        no!(mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a))))))))))))))
-      );
+      return op!(no!(mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a)))))))))))))));
     case 17:
-      return pq!(
-        op!(
-          no!(
-            mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a)))))))))))))
-          )
-        )
-      );
+      return pq!(op!(no!(mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a))))))))))))))));
     case 18:
-      return qr!(
-        pq!(
-          op!(
-            no!(
-              mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a)))))))))))))
-            )
-          )
-        )
-      );
+      return qr!(pq!(op!(no!(mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a)))))))))))))))));
     case 19:
       return rs!(
-        qr!(
-          pq!(
-            op!(
-              no!(
-                mn!(
-                  lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a))))))))))))
-                )
-              )
-            )
-          )
-        )
+        qr!(pq!(op!(no!(mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a))))))))))))))))),
       );
     case 20:
       return st!(
-        rs!(
-          qr!(
-            pq!(
-              op!(
-                no!(
-                  mn!(
-                    lm!(
-                      kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a)))))))))))
-                    )
-                  )
-                )
-              )
-            )
-          )
-        )
+        rs!(qr!(pq!(op!(no!(mn!(lm!(kl!(jk!(ij!(hi!(gh!(fg!(ef!(de!(cd!(bc!(ab!(a)))))))))))))))))),
       );
   }
   return;

@@ -1,12 +1,11 @@
-import { For, Accessor, createSignal, JSXElement } from "solid-js";
+import { For, Accessor, createSignal, JSXElement, Component } from "solid-js";
 import { InputAttributes, SelectAttributes, TextAreaAttributes } from "./field";
 import * as Form from "./form";
 import { formToSolid } from "./form-solid";
 import * as V from "./utils/validation";
 
-export interface FormComponent<A> {
-  (props: { onChange: (a: V.Validation<string, A>) => void }): JSXElement;
-}
+export interface FormComponent<A>
+  extends Component<{ onChange: (a: V.Validation<string, A>) => void }> {}
 
 // {@link defaultFormRenderer}
 export interface FormRenderer<A> {

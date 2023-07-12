@@ -104,112 +104,105 @@ export const fieldToSolid = <A,>(
   field.match({
     Boolean:
       ({ name, init, validate, attributes }) =>
-      ({ onChange }) =>
-        (
-          <FieldInput
-            formRenderer={formRenderer}
-            forward={{ ...attributes, checked: init }}
-            init={init}
-            name={name}
-            onChange={onChange}
-            readInput={(input) => input.checked}
-            type={attributes?.type ?? "checkbox"}
-            validate={validate}
-          />
-        ),
+      ({ onChange }) => (
+        <FieldInput
+          formRenderer={formRenderer}
+          forward={{ ...attributes, checked: init }}
+          init={init}
+          name={name}
+          onChange={onChange}
+          readInput={(input) => input.checked}
+          type={attributes?.type ?? "checkbox"}
+          validate={validate}
+        />
+      ),
 
     File:
       ({ name, init, validate, attributes }) =>
-      ({ onChange }) =>
-        (
-          <FieldInput
-            formRenderer={formRenderer}
-            forward={{ ...attributes }}
-            init={init}
-            name={name}
-            onChange={onChange}
-            readInput={(input) => (input.files ? M.Just(input.files) : M.Nothing())}
-            type={attributes?.type ?? "file"}
-            validate={validate}
-          />
-        ),
+      ({ onChange }) => (
+        <FieldInput
+          formRenderer={formRenderer}
+          forward={{ ...attributes }}
+          init={init}
+          name={name}
+          onChange={onChange}
+          readInput={(input) => (input.files ? M.Just(input.files) : M.Nothing())}
+          type={attributes?.type ?? "file"}
+          validate={validate}
+        />
+      ),
 
     Number:
       ({ name, init, validate, attributes }) =>
-      ({ onChange }) =>
-        (
-          <FieldInput
-            formRenderer={formRenderer}
-            forward={{ ...attributes, value: init }}
-            init={init}
-            name={name}
-            onChange={onChange}
-            readInput={(input) => input.valueAsNumber}
-            type={attributes?.type ?? "number"}
-            validate={validate}
-          />
-        ),
+      ({ onChange }) => (
+        <FieldInput
+          formRenderer={formRenderer}
+          forward={{ ...attributes, value: init }}
+          init={init}
+          name={name}
+          onChange={onChange}
+          readInput={(input) => input.valueAsNumber}
+          type={attributes?.type ?? "number"}
+          validate={validate}
+        />
+      ),
 
     Text:
       ({ name, init, validate, attributes }) =>
-      ({ onChange }) =>
-        (
-          <FieldInput
-            formRenderer={formRenderer}
-            forward={{ ...attributes, value: init }}
-            init={init}
-            name={name}
-            onChange={onChange}
-            readInput={(input) => input.value}
-            type={attributes?.type ?? "text"}
-            validate={validate}
-          />
-        ),
+      ({ onChange }) => (
+        <FieldInput
+          formRenderer={formRenderer}
+          forward={{ ...attributes, value: init }}
+          init={init}
+          name={name}
+          onChange={onChange}
+          readInput={(input) => input.value}
+          type={attributes?.type ?? "text"}
+          validate={validate}
+        />
+      ),
 
     TextArea:
       ({ name, init, validate, attributes }) =>
-      ({ onChange }) =>
-        (
-          <TextArea
-            formRenderer={formRenderer}
-            forward={{ ...attributes }}
-            init={init}
-            name={name}
-            onChange={onChange}
-            readInput={(input) => input.value}
-            validate={validate}
-          />
-        ),
+      ({ onChange }) => (
+        <TextArea
+          formRenderer={formRenderer}
+          forward={{ ...attributes }}
+          init={init}
+          name={name}
+          onChange={onChange}
+          readInput={(input) => input.value}
+          validate={validate}
+        />
+      ),
 
     Time:
       ({ name, init, validate, attributes }) =>
-      ({ onChange }) =>
-        (
-          <FieldInput
-            formRenderer={formRenderer}
-            forward={{
-              ...attributes,
-              value: M.withDefault(
-                pipe(
-                  init,
-                  M.map((x) => x.toString()),
-                ),
-                "",
+      ({ onChange }) => (
+        <FieldInput
+          formRenderer={formRenderer}
+          forward={{
+            ...attributes,
+            value: M.withDefault(
+              pipe(
+                init,
+                M.map((x) => x.toString()),
               ),
-            }}
-            init={init}
-            name={name}
-            onChange={onChange}
-            readInput={(input) => (input.valueAsDate ? M.Just(input.valueAsDate) : M.Nothing())}
-            type={attributes?.type ?? "date"}
-            validate={validate}
-          />
-        ),
+              "",
+            ),
+          }}
+          init={init}
+          name={name}
+          onChange={onChange}
+          readInput={(input) => (input.valueAsDate ? M.Just(input.valueAsDate) : M.Nothing())}
+          type={attributes?.type ?? "date"}
+          validate={validate}
+        />
+      ),
 
     Pure:
       () =>
-      ({}) =>
-        <></>,
+      ({}) => <></>,
 
     Choice:
       ({ name, choice, choices, attributes }) =>

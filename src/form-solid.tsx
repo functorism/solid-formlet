@@ -1,4 +1,4 @@
-import { Switch, Match, createEffect, createSignal, For } from "solid-js";
+import { Switch, Match, createEffect, createSignal, For, ComponentProps } from "solid-js";
 import { createStore } from "solid-js/store";
 import { Dynamic } from "solid-js/web";
 import { fieldToSolid } from "./field-solid";
@@ -106,9 +106,11 @@ export const formToSolid = <A,>(
                   onDelete(i),
                   <Dynamic
                     component={item.component}
-                    onChange={(value) => {
-                      setState(i(), "value", value);
-                    }}
+                    onChange={
+                      ((value) => {
+                        setState(i(), "value", value);
+                      }) as ComponentProps<typeof item.component>["onChange"]
+                    }
                   />,
                 )
               }

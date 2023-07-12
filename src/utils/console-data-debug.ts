@@ -21,8 +21,11 @@ export const dataDevtoolsFormatter = () => ({
         {
           get:
             () =>
-            (...args: unknown[]) =>
-              ["div", {}, ...args.map((x) => (x ? ["li", {}, ["object", { object: x }]] : null))],
+            (...args: unknown[]) => [
+              "div",
+              {},
+              ...args.map((x) => (x ? ["li", {}, ["object", { object: x }]] : null)),
+            ],
         },
       ),
     ),
